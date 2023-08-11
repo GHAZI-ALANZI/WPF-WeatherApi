@@ -4,6 +4,21 @@
              xmlns:local="clr-namespace:Wpf_WeatherApi"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary Source="Styles/ColorStyles.xaml"/>
+
+                <ResourceDictionary Source="Styles/TextBoxStyle.xaml"/>
+
+                <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+
     </Application.Resources>
+
 </Application>
