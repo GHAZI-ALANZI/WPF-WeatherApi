@@ -129,6 +129,8 @@ namespace Wpf_WeatherApi
                 this.DragMove();
             }
         }
+
+       
     }
 }
 

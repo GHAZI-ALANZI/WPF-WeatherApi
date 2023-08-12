@@ -9,9 +9,11 @@
          WindowStartupLocation="CenterScreen"
  WindowStyle="None"
  AllowsTransparency="True"
- Background="Transparent"
  MouseDown="Window_MouseDown"
         >
+    <Window.Background>
+        <ImageBrush ImageSource="/nature-3082832_1280.jpg"/>
+    </Window.Background>
     <Grid>
 
         <Grid.RowDefinitions>
@@ -27,10 +29,10 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Width="250"
-                Height="425"
+        <Border Width="244"
+                Height="450"
                 CornerRadius="20"
-                Background="{StaticResource cs_Background}"
+                Background="{DynamicResource cs_Background}"
                 BorderBrush="{StaticResource cs_BorderBrush}"
                 BorderThickness="3"
                 Grid.RowSpan="4"
@@ -39,15 +41,15 @@
         <Border Grid.Row="0"
                 Grid.RowSpan="3"
                 Grid.ColumnSpan="3"
-                Margin="10"
+                Margin="10,0,10,10"
                 CornerRadius="20 20 0 0"
-                Background="{StaticResource cs_Background}"/>
+                Background="{DynamicResource cs_Background}" Opacity="0.09"/>
 
         <Border Grid.Row="4"
                 Grid.ColumnSpan="3"
                 Margin="10 0 10 10"
                 CornerRadius="0 0 20 20"
-                Background="{StaticResource cs_Background}"/>
+                Background="{StaticResource cs_Background}" Opacity="0.095"/>
 
         <Button Grid.Column="2"
                 Style="{StaticResource CloseButtonStyle}"
@@ -60,8 +62,7 @@
                     Margin="0 40 0 0">
 
             <Image Source="/Images/location.png"
-                   Height="25"
-                   HorizontalAlignment="Right"/>
+                   Height="33" Width="34"/>
 
             <Label x:Name="lblCityName"
                    Content="- - -"
@@ -77,18 +78,18 @@
 
             <Label Name="lblDigitalClock" 
                    Content="{Binding Path=Now, StringFormat='{}{0:hh:mm:ss tt}'}" 
-                   FontSize="9" 
+                   FontSize="10" 
                    FontFamily="Roboto"
                    Foreground="{StaticResource cs_BBackground}"
                    HorizontalAlignment="Center" 
-                   VerticalAlignment="Center"/>
+                   VerticalAlignment="Center" FontWeight="Bold"/>
 
             <Border Margin="10"
                     Background="{StaticResource cs_BBackground}"
                     Height="100"
                     Width="100"
                     CornerRadius="10"
-                    Opacity="0.75">
+                    Opacity="0.70">
 
                 <Image x:Name="imgWeatherIcon"
                        Height="80"
@@ -110,7 +111,7 @@
                     Margin="10">
 
             <Image Source="/Images/temperature.png"
-                   Height="25"/>
+                   Height="40" Width="73"/>
 
             <Label x:Name="lblTemperature"
                    Content="- - -"
@@ -126,7 +127,7 @@
                     Margin="10">
 
             <Image Source="/Images/windspeed.png"
-                   Height="25"/>
+                   Height="40" Width="78"/>
 
             <Label x:Name="lblWindSpeed"
                    Content="- - -"
@@ -142,7 +143,7 @@
                     Margin="10">
 
             <Image Source="/Images/humidity.png"
-                   Height="25"/>
+                   Height="40" Width="74"/>
 
             <Label x:Name="lblHumidity"
                    Content="- - -"
@@ -163,7 +164,7 @@
                      x:Name="txtCityName"
                      Style="{StaticResource tbox_TextPlaceholder}"
                      HorizontalAlignment="Center"
-                     Tag="Please enter a city name!"/>
+                     Tag="Please enter a city name!" />
 
             <Button Height="35"
                     Width="200"

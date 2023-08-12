@@ -120,5 +120,11 @@
     <Resource Include="Images\temperature.png" />
     <Resource Include="Images\windspeed.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tree-838667_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="nature-3082832_1280.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
